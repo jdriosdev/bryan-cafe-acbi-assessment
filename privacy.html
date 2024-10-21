@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bryan's Cafe</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        header {
+            background-color: #493628;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 1.2rem;
+        }
+
+        .hero {
+            position: relative;
+            height: 400px;
+            background-image: url('hero-image.jpg');
+            /* Replace with your hero image */
+            background-size: cover;
+            background-position: center;
+        }
+
+        .hero-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 3rem;
+            text-shadow: 2px 2px 5px black;
+            text-align: center;
+        }
+
+        .categories {
+            text-align: center;
+            padding: 2rem 0;
+        }
+
+        .categories h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .card-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .card {
+            position: relative;
+            width: 300px;
+            height: 200px;
+            background-size: cover;
+            background-position: center;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .card-text {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            text-align: center;
+            color: white;
+            font-size: 1.5rem;
+            padding: 10px;
+            background: rgba(0, 0, 0, 0.6);
+        }
+
+        .about {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem;
+        }
+
+        .about img {
+            width: 300px;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .about-text {
+            margin-left: 20px;
+            max-width: 500px;
+        }
+
+        footer {
+            background-color: #493628;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+        }
+
+        h1 {
+            text-align: center;
+            padding: 1rem;
+            background-color: #AB886D;
+            color: white;
+        }
+
+        p {
+            text-align: center;
+            margin: 16px 36px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <nav>
+            <a href="/index.html">About</a>
+            <a href="/menu.html">Menu</a>
+            <a href="/contact.html">Contact</a>
+            <a href="/privacy.html">Privacy Policy</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" style="background-image: url('hero.png');">
+        <div class=" hero-text">
+            Always, fresh cafe
+        </div>
+    </section>
+
+    <div>
+        <h1> Privacy Policy</h1>
+        <p>
+
+            This page will contain the privacy policy of Bryan’s Café since it collects information from users in the
+            enquiry form. The privacy policy link should be located only in the footer as seen in the diagram
+            above. When the user clicks it, the page should open a new tab.
+        </p>
+    </div>
+
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; <span id="year"></span> Bryan's Cafe</p>
+    </footer>
+
+
+
+    <!-- JavaScript to update the year -->
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+
+</body>
+
+</html>

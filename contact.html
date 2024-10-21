@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bryan's Cafe</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        header {
+            background-color: #493628;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 1.2rem;
+        }
+
+        .hero {
+            position: relative;
+            height: 400px;
+            background-image: url('hero-image.jpg');
+            /* Replace with your hero image */
+            background-size: cover;
+            background-position: center;
+        }
+
+        .hero-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 3rem;
+            text-shadow: 2px 2px 5px black;
+            text-align: center;
+        }
+
+        .categories {
+            text-align: center;
+            padding: 2rem 0;
+        }
+
+        .categories h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .card-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .card {
+            position: relative;
+            width: 300px;
+            height: 200px;
+            background-size: cover;
+            background-position: center;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .card-text {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            text-align: center;
+            color: white;
+            font-size: 1.5rem;
+            padding: 10px;
+            background: rgba(0, 0, 0, 0.6);
+        }
+
+        .about {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem;
+        }
+
+        .about img {
+            width: 300px;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .about-text {
+            margin-left: 20px;
+            max-width: 500px;
+        }
+
+        footer {
+            background-color: #493628;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-size: 1rem;
+            color: #666;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 1rem;
+        }
+
+        textarea {
+            resize: vertical;
+            height: 100px;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #AB886D;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #AB886D;
+        }
+
+        .form-container {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 400px;
+            margin: 20px auto;
+        }
+
+
+        .table-container {
+            max-width: 900px;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        th,
+        td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #AB886D;
+            color: white;
+        }
+
+        td {
+            background-color: #f9f9f9;
+        }
+
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+
+        .contact {
+            color: #e67e22;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <nav>
+            <a href="/index.html">About</a>
+            <a href="/menu.html">Menu</a>
+            <a href="/contact.html">Contact</a>
+            <a href="/privacy.html">Privacy Policy</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" style="background-image: url('hero.png');">
+        <div class=" hero-text">
+            Always, fresh cafe
+        </div>
+    </section>
+
+    <div class="form-container">
+        <h2>Contact Us</h2>
+        <form action="submit-form.php" method="POST">
+            <label for="first-name">First Name</label>
+            <input type="text" id="first-name" name="first-name" required>
+
+            <label for="last-name">Last Name</label>
+            <input type="text" id="last-name" name="last-name" required>
+
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="subject">Message Subject</label>
+            <input type="text" id="subject" name="subject" required>
+
+            <label for="message">Message Body</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+
+    <div class="table-container">
+        <h1>Our Branches</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Branch</th>
+                    <th>Address</th>
+                    <th>Contact</th>
+                    <th>Opening Hours</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>76 Devonshire St, Surry Hills NSW</td>
+                    <td>76 Devonshire St, Surry Hills NSW</td>
+                    <td class="contact">02 9211 1234</td>
+                    <td>Mon - Fri: 6:00 to 14:30, Sat-Sun: 7:00 to 15:00</td>
+                </tr>
+                <tr>
+                    <td>451 Pitt St, Haymarket Sydney, NSW</td>
+                    <td>451 Pitt St, Haymarket Sydney, NSW</td>
+                    <td class="contact">02 9262 5678</td>
+                    <td>Mon - Fri: 6:00 to 16:00, Sat-Sun: 7:00 to 15:00</td>
+                </tr>
+                <tr>
+                    <td>31 Alfred Street, Circular Quay, NSW</td>
+                    <td>31 Alfred Street, Circular Quay, NSW</td>
+                    <td class="contact">02 8971 9101</td>
+                    <td>Mon - Fri: 6:00 to 16:00, Sat-Sun: 7:00 to 15:00</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <!-- Footer -->
+    <footer>
+        <p>&copy; <span id="year"></span> Bryan's Cafe</p>
+    </footer>
+
+    <!-- JavaScript to update the year -->
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+
+</body>
+
+</html>
